@@ -127,5 +127,4 @@ URL: localhost:8000/v1/report/summary
 
 
 ---
-[Back to top](#efishery-test)
-> Made with &#9829; by [thedevsaddam](https://github.com/thedevsaddam) | Generated at: 2021-10-19 22:27:42 by [docgen](https://github.com/thedevsaddam/docgen)
+> Made with &#9829; by [thedevsaddam](https://github.com/thedevsaddam)

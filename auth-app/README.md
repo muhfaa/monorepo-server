@@ -118,11 +118,8 @@ URL: localhost:3000/users/register/:name/:phone/:role
 {
     "message": "Registration successful",
     "user": {
-        "id": 1,
-        "name": "Fazri",
         "phone": "08123456711",
-        "role": "admin",
-        "password": "fyo8"
+        "password": "hgv1"
     }
 }
 ```

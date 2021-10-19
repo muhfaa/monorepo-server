@@ -59,9 +59,11 @@ func JWTMiddlewareAdmin() echo.MiddlewareFunc {
 				return c.JSON(http.StatusForbidden, common.NewInternalServerError("Signing method invalid"))
 			}
 
-			role := claim["role"].(string)
+			data := claim["user"]
+			role, _ := data.(map[string]interface{})
+			admin := role["role"].(string)
 
-			if role != "admin" {
+			if admin != "admin" {
 				return c.JSON(http.StatusForbidden, common.NewInternalServerError("Failed on verify role, role must admin"))
 			}
 

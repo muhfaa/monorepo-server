@@ -60,7 +60,7 @@ URL: localhost:3000/users/login/:phone/:password
 
 ```
 {
-    "status": true,
+    "status": "success",
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoiRmF6cmkiLCJwaG9uZSI6IjA4MTIzNDU2NzExIiwicm9sZSI6ImFkbWluIiwicGFzc3dvcmQiOiJmeW84In0sImlhdCI6MTYzNDY1OTQ5NywiZXhwIjoxNjM0NjYzMDk3fQ.ni8SZ0bh5gkqO0Roz78ZsAMsEmW2Wp76x4RmO3atHHs"
 }
 ```
@@ -85,7 +85,7 @@ URL: localhost:3000/users/profile
 
 ```
 {
-    "status": true,
+    "status": "success",
     "data": {
         "user": {
             "id": 2,

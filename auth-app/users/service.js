@@ -14,7 +14,12 @@ async function CreateUser (req) {
             user = await User.create(req)
         }
 
-        return {status: "success", user: user}
+        let data = {
+            phone: user.phone,
+            password: user.password
+        }
+
+        return {status: "success", user: data}
     } catch (error) {
         throw error
     }

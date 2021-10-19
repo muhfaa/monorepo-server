@@ -14,7 +14,7 @@ async function CreateUser (req) {
             user = await User.create(req)
         }
 
-        return {status: true, user: user}
+        return {status: "success", user: user}
     } catch (error) {
         throw error
     }
@@ -27,7 +27,7 @@ async function GetUser (req) {
         const beareToken = req['authorization'].split(' ')[1]
         const data = jwt.verify(beareToken, secret)
         
-        return {status: true, data: data}
+        return {status: "success", data: data}
     } catch (error) {
         throw error
     }
@@ -38,12 +38,12 @@ async function Auth (req) {
     try {
         const user = await User.findOne({where: {phone: req.phone, password: req.password}})
         if (!user) {
-            throw {status: false, message: "user not found"} 
+            throw {status: "error", message: "user not found"} 
         }
 
         const token = jwt.sign({user: user}, secret, { expiresIn: '1h' })
         
-        return {status: true, token: token}
+        return {status: "success", token: token}
     } catch (error) {
         throw error
     }

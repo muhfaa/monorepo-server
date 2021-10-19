@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "165100e5-2093-4e33-b3d0-54bd854e7520",
+		"name": "Efishery test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "fetch api",
+			"item": [
+				{
+					"name": "Get Commodity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoiRmF6cmkiLCJwaG9uZSI6IjA4MTIzNDU2Nzg5Iiwicm9sZSI6ImFkbWluIiwicGFzc3dvcmQiOiIzNTM5In0sImlhdCI6MTYzNDY1NDQyOSwiZXhwIjoxNjM0NjU4MDI5fQ.nGEriNpsbP9A2IlNn61xwSzdieEFij56uES7pfzhiWI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/v1/commodity",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"v1",
+								"commodity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Commodity Report",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJuYW1lIjoiRmF6ciIsInBob25lIjoiMDgxMjM0NTY3MTAiLCJyb2xlIjoidXNlciIsInBhc3N3b3JkIjoidnFyOCJ9LCJpYXQiOjE2MzQ2NTQ1MjAsImV4cCI6MTYzNDY1ODEyMH0.lt8A-ijvFg8G0Cjb_QX8d9NK_cfa5ctrWXryVeDOECw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/v1/report/summary",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"v1",
+								"report",
+								"summary"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth api",
+			"item": [
+				{
+					"name": "Registration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/users/register/Fazri/08123456711/user",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"register",
+								"Fazri",
+								"08123456711",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/users/login/08123456711/vqr8",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"login",
+								"08123456711",
+								"vqr8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJuYW1lIjoiRmF6ciIsInBob25lIjoiMDgxMjM0NTY3MTAiLCJyb2xlIjoidXNlciIsInBhc3N3b3JkIjoidnFyOCJ9LCJpYXQiOjE2MzQ2NTQ1MjAsImV4cCI6MTYzNDY1ODEyMH0.lt8A-ijvFg8G0Cjb_QX8d9NK_cfa5ctrWXryVeDOECw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/users/profile",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
